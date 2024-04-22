@@ -1,0 +1,8 @@
+{
+  "name": "Official Plugins",
+  "description": "Queen Medusa",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/LustyFlix/OfficialPlugins/builds/plugins.json"
+  ]
+}
