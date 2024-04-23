@@ -10,23 +10,41 @@ import org.jsoup.nodes.Element
 import java.net.URI
 
 open class BananaMoviesProvider : MainAPI() {
-    private val globalTvType = TvType.NSFW
     override var mainUrl = "https://bananamovies.org"
     private var directUrl = ""
     override var name = "BananaMovies"
     override val hasMainPage = true
     override var lang = "en"
-    override val supportedTypes = setOf(TvType.NSFW)
-    override val vpnStatus = VPNStatus.MightBeNeeded
+    override val supportedTypes = setOf(TvType.Movie)
 
 
     override val mainPage = mainPageOf(
-        "director/brazzers" to "Brazzers",
-        "director/reality-kings" to "Reality Kings",
-        "director/mofos" to "Mofos",
         "director/evil-angel" to "Evil Angel",
-        "director/new-sensations" to "New Sensations",
-        "director/naughty-america" to "Naughty America",
+        "director/new-sensations" to "Evil",
+        "director/brazzers" to "Evil",
+        "director/reality-kings" to "Evil",
+        "director/jules-jordan-video" to "Evil",
+        "director/lethal-hardcore" to "Evil",
+        "director/team-skeet" to "Evil",
+        "director/mofos" to "Evil",
+        "director/digital-sin" to "Evil",
+        "director/elegant-angel" to "Evil",
+        "director/wicked-pictures" to "Evil",
+        "director/digital-playground" to "Evil",
+        "director/devils-film" to "Evil",
+        "director/bang-bros-productions" to "Evil",
+        "director/3rd-degree" to "Evil",
+        "director/pornfidelity" to "Evil",
+        "director/letsdoeit" to "Evil",
+        "director/private" to "Evil",
+        "director/marc-dorcel" to "Evil",
+        "director/zero-tolerance-ent" to "Evil",
+        "director/21-sextury-video" to "Evil",
+        "director/naughty-america" to "Evil",
+        "director/bluebird-films" to "Evil",
+        "director/adam-eve" to "Evil",
+        "director/bang" to "Evil",
+        "director/hardx" to "Evil",
         "movies" to "Popular Porn Movies",
     )
 
@@ -46,9 +64,8 @@ open class BananaMoviesProvider : MainAPI() {
         val href = fixUrl(this.selectFirst("a")?.attr("href").toString())
         val posterUrl = fixUrlNull(this.selectFirst("img")?.attr("data-lazy-src"))
 
-        return newMovieSearchResponse(title, href, TvType.NSFW) {
+        return newMovieSearchResponse(title, href, TvType.Movie) {
             this.posterUrl = posterUrl
-            type = globalTvType,
         }
     }
 
@@ -77,7 +94,7 @@ open class BananaMoviesProvider : MainAPI() {
             it.toSearchResult()
         }
 
-        return newMovieLoadResponse(title, url, TvType.NSFW, url) {
+        return newMovieLoadResponse(title, url, TvType.Movie, url) {
                 this.posterUrl = poster
                 this.year = year
                 this.plot = description
