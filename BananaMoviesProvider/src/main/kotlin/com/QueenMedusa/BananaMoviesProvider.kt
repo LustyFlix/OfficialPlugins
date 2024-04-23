@@ -61,7 +61,7 @@ open class BananaMoviesProvider : MainAPI() {
         val request = app.get(url)
         directUrl = getBaseUrl(request.url)
         val document = request.document
-        val title = document.selectFirst("h1.Title").replace(" Porn Movie Online Free", "")?.text()?.trim() ?: return null
+        val title = document.selectFirst("h1.Title")?.text()?.replace(" Porn Movie Online Free", "")?.trim() ?: return null
         val poster = fixUrlNull(document.selectFirst("div.Image figure img")?.attr("data-lazy-src"))
         val tags = document.select("p.Director span:nth-child(1) a").map { it.text() }
         val year = document.select("span.Views a").text().trim()
