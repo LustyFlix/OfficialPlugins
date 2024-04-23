@@ -72,7 +72,7 @@ open class BananaMoviesProvider : MainAPI() {
     override suspend fun search(query: String): List<SearchResponse> {
         val document = app.get("$mainUrl/?s=$query").document
 
-        return document.select("div.ml-item").mapNotNull {
+        return document.select("article.TPost.B").mapNotNull {
             it.toSearchResult()
         }
     }
