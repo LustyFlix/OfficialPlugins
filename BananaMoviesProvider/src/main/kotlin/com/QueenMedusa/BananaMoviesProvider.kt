@@ -10,12 +10,14 @@ import org.jsoup.nodes.Element
 import java.net.URI
 
 open class BananaMoviesProvider : MainAPI() {
+    private val globalTvType = TvType.NSFW
     override var mainUrl = "https://bananamovies.org"
     private var directUrl = ""
     override var name = "BananaMovies"
     override val hasMainPage = true
     override var lang = "en"
-    override val supportedTypes = setOf(TvType.Movie)
+    override val supportedTypes = setOf(TvType.NSFW)
+    override val vpnStatus = VPNStatus.MightBeNeeded
 
 
     override val mainPage = mainPageOf(
@@ -44,8 +46,9 @@ open class BananaMoviesProvider : MainAPI() {
         val href = fixUrl(this.selectFirst("a")?.attr("href").toString())
         val posterUrl = fixUrlNull(this.selectFirst("img")?.attr("data-lazy-src"))
 
-        return newMovieSearchResponse(title, href, TvType.Movie) {
+        return newMovieSearchResponse(title, href, TvType.NSFW) {
             this.posterUrl = posterUrl
+            type = globalTvType,
         }
     }
 
@@ -74,7 +77,7 @@ open class BananaMoviesProvider : MainAPI() {
             it.toSearchResult()
         }
 
-        return newMovieLoadResponse(title, url, TvType.Movie, url) {
+        return newMovieLoadResponse(title, url, TvType.NSFW, url) {
                 this.posterUrl = poster
                 this.year = year
                 this.plot = description
