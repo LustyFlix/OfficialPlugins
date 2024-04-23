@@ -1,0 +1,139 @@
+[
+    {
+        "iconUrl": "https://imgs.adultempire.com/res/pm/favico_ae_114x114.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/LustyFlix/OfficialPlugins",
+        "fileSize": 10554,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Queen Medusa"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "AdultDVDEmpireProvider",
+        "description": "AdultDVDEmpire.Com",
+        "url": "https://raw.githubusercontent.com/LustyFlix/OfficialPlugins/builds/AdultDVDEmpireProvider.cs3",
+        "name": "AdultDVDEmpireProvider"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=9animetv.to&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/LustyFlix/OfficialPlugins",
+        "fileSize": 52543,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Queen Medusa"
+        ],
+        "tvTypes": [
+            "Anime",
+            "OVA"
+        ],
+        "version": 1,
+        "internalName": "AniwaveProvider",
+        "description": "9AnimeTV.To",
+        "url": "https://raw.githubusercontent.com/LustyFlix/OfficialPlugins/builds/AniwaveProvider.cs3",
+        "name": "AniwaveProvider"
+    },
+    {
+        "iconUrl": "https://www.themoviedb.org/favicon.ico",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/LustyFlix/OfficialPlugins",
+        "fileSize": 275738,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Queen Medusa"
+        ],
+        "tvTypes": [
+            "AsianDrama",
+            "TvSeries",
+            "Anime",
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "CodeStream",
+        "description": "Streaming API",
+        "url": "https://raw.githubusercontent.com/LustyFlix/OfficialPlugins/builds/CodeStream.cs3",
+        "name": "CodeStream"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=pornhub.com&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/LustyFlix/OfficialPlugins",
+        "fileSize": 13056,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Queen Medusa"
+        ],
+        "tvTypes": [
+            "NSFW"
+        ],
+        "version": 1,
+        "internalName": "CornHubProvider",
+        "description": "PornHub.com",
+        "url": "https://raw.githubusercontent.com/LustyFlix/OfficialPlugins/builds/CornHubProvider.cs3",
+        "name": "CornHubProvider"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/LustyFlix/lustyflix.github.io/main/Logo.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/LustyFlix/OfficialPlugins",
+        "fileSize": 10184,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Queen Medusa"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "EroticMovies",
+        "description": "Film1K.Com",
+        "url": "https://raw.githubusercontent.com/LustyFlix/OfficialPlugins/builds/EroticMovies.cs3",
+        "name": "EroticMovies"
+    },
+    {
+        "iconUrl": "https://raw.githubusercontent.com/LustyFlix/lustyflix.github.io/main/Logo.png",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/LustyFlix/OfficialPlugins",
+        "fileSize": 11257,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Queen Medusa"
+        ],
+        "tvTypes": [
+            "Movie"
+        ],
+        "version": 1,
+        "internalName": "PornMovies",
+        "description": "BananaMovies.Org",
+        "url": "https://raw.githubusercontent.com/LustyFlix/OfficialPlugins/builds/PornMovies.cs3",
+        "name": "PornMovies"
+    },
+    {
+        "iconUrl": "https://www.google.com/s2/favicons?domain=xvideos.com&sz=%size%",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/LustyFlix/OfficialPlugins",
+        "fileSize": 15629,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "Queen Medusa"
+        ],
+        "tvTypes": [
+            "NSFW"
+        ],
+        "version": 1,
+        "internalName": "XvideosProvider",
+        "description": "XVideos.Com",
+        "url": "https://raw.githubusercontent.com/LustyFlix/OfficialPlugins/builds/XvideosProvider.cs3",
+        "name": "XvideosProvider"
+    }
+]
