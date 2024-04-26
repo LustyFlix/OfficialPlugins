@@ -37,7 +37,7 @@ open class AdultDVDEmpireProvider : MainAPI() {
     }
 
     private fun Element.toSearchResult(): SearchResponse? {
-        val title = this.selectFirst("a.boxcover")?.attr("title")?.text()?.trim() ?: return null
+        val title = this.selectFirst("a.boxcover")?.attr("title")?.trim() ?: return null
         val href = fixUrl(this.selectFirst("a.boxcover")?.attr("href").toString())
         val posterUrl = fixUrlNull(this.selectFirst("a.boxcover picture source:nth-child(1)")?.attr("srcset"))
 
@@ -61,12 +61,10 @@ open class AdultDVDEmpireProvider : MainAPI() {
         val title = document.selectFirst("h1.spacing-bottom")?.text()?.trim() ?: return null
         val poster = fixUrlNull(document.selectFirst("div.col-sm-3.col-md-2.spacing-bottom a")?.attr("href"))
         val tags = document.select("div.col-sm-6.col-lg-7.spacing-bottom p:nth-child(3) a").map { it.text() }
-        //val year = document.select("span.Views a").text().trim()
-            .toIntOrNull()
+        //val year = document.select("span.Views a").text().trim().toIntOrNull()
         //val description = document.selectFirst("div.Description p")?.text()?.trim()
 
         //val rating = document.select("div.mvici-right > div.imdb_r span").text().toRatingInt()
-        val actors = document.select("ul#CastUl li a").map { it.text() }
         val actors = document.select("div.row.item-grid.item-grid-girls > div.col-xs-6.col-sm-4.col-md-2.spacing-bottom").map {
             Actor(
                 it.select("a.boxcover.girl img").attr("title"),
