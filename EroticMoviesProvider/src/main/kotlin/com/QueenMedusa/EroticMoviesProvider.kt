@@ -19,18 +19,18 @@ open class EroticMoviesProvider : MainAPI() {
 
 
     override val mainPage = mainPageOf(
-        "category/drama" to "Drama",
-        "category/comedy" to "Comedy",
-        "category/thriller" to "Thriller",
-        "category/horror" to "Horror",
-        "category/crime" to "Crime",
-        "category/romance" to "Romance",
         "category/action" to "Action",
-        "category/sci-fi" to "Sci-Fi",
-        "category/mystery" to "Mystery",
-        "category/fantasy" to "Fantasy",
         "category/adventure" to "Adventure",
+        "category/comedy" to "Comedy",
+        "category/crime" to "Crime",
         "category/documentary" to "Documentary",
+        "category/drama" to "Drama",
+        "category/fantasy" to "Fantasy",
+        "category/horror" to "Horror",
+        "category/mystery" to "Mystery",
+        "category/romance" to "Romance",
+        "category/sci-fi" to "Sci-Fi",
+        "category/thriller" to "Thriller",
         "" to "Popular Movies",
     )
 
@@ -102,7 +102,7 @@ open class EroticMoviesProvider : MainAPI() {
         val doc = app.get(data).document
 
         doc.select("iframe").forEach {
-            loadExtractor(fixUrl(it.attr("src")), data, subtitleCallback, callback)
+            loadExtractor(fixUrl(it.attr("src").replace("films5k", "streamwish")), data, subtitleCallback, callback)
         }
         
         return true
