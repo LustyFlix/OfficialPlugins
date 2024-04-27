@@ -102,7 +102,7 @@ open class EroticMoviesProvider : MainAPI() {
         val doc = app.get(data).document
 
         doc.select("iframe").forEach {
-            loadExtractor(fixUrl(it.attr("src").replace("films5k", "streamwish")), data, subtitleCallback, callback)
+            loadExtractor(fixUrl(it.attr("src").replace("films5k.com", "streamwish.to")), data, subtitleCallback, callback)
         }
         
         return true
