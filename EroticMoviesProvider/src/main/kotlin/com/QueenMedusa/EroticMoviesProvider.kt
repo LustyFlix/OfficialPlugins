@@ -9,7 +9,7 @@ import com.lagradost.cloudstream3.utils.loadExtractor
 import org.jsoup.nodes.Element
 import java.net.URI
 
-open class BananaMoviesProvider : MainAPI() {
+open class EroticMoviesProvider : MainAPI() {
     override var mainUrl = "https://www.film1k.com"
     private var directUrl = ""
     override var name = "Erotic Movies"
